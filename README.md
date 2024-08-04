@@ -6,4 +6,4 @@ Este projeto consiste em desenvolver uma galeria de imagens do usuário e pratic
 
 ## Link para o GitHub Pages:
 
-https://mikywarlock.github.io/web_prokect_around/
+https://mikywarlock.github.io/web_project_around/

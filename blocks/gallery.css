@@ -1,16 +1,20 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
   gap: 17px 20px;
   justify-content: space-between;
   margin: 0 auto;
   width: fit-content;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .gallery {
-    grid-template-columns: 250px;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .gallery {
+    grid-template-columns: 1fr;
   }
 }

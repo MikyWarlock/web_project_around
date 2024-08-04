@@ -16,7 +16,10 @@
 .profile__name {
   margin: 0;
   font-size: 42px;
-  width: fit-content;
+  max-width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__image {

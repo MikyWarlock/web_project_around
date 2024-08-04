@@ -22,8 +22,9 @@ closePopup.addEventListener("click", function () {
   overlay.classList.remove("overlay_active");
 });
 
-formSubmit.addEventListener("click", function (evt) {
-  evt.preventDefault();
+//Tentei substituir o "click" por "submit", mas não consegui fazer funcionar, ele sempre recarrega a página e a edição dos campos não roda :(
+formSubmit.addEventListener("click", function (e) {
+  e.preventDefault();
   profileName.textContent = formName.value;
   profileDescription.textContent = formDescription.value;
   popup.classList.add("popup_invisible");
