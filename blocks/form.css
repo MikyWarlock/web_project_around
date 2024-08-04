@@ -40,6 +40,10 @@
 }
 
 @media screen and (max-width: 720px) {
+  .form__title {
+    font-size: 18px;
+  }
+  
   .form__name, .form__description {
     width: 100%;
   }
