@@ -38,3 +38,13 @@
   opacity: .8;
   cursor: pointer;
 }
+
+@media screen and (max-width: 720px) {
+  .form__name, .form__description {
+    width: 100%;
+  }
+
+  .form__submit {
+    width: 100%;
+  }
+}
