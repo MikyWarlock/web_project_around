@@ -1,0 +1,35 @@
+.edit-form-popup {
+  display: flex;
+  width: 430px;
+  height: 330px;
+  border-radius: 10px;
+  background-color: #FFF;
+  padding: 34px 36px 36px;
+}
+
+.edit-form-popup__close-button {
+  rotate: 45deg;
+  font-size: 50px;
+  width: 40px;
+  height: 40px;
+  color: #FFF;
+  grid-column-start: 2;
+}
+
+.edit-form-popup__close-button:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .edit-form-popup {
+    width: 282px;
+    height: 322px;
+    padding: 25px 22px;
+  }
+
+  .edit-form-popup__close-button {
+    width: 28px;
+    height: 28px;
+  }
+}

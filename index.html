@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Ao Redor dos EUA</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">
+          Around <span class="header__accent">The U.S.</span>
+        </h1>
+        <div class="header__line"></div>
+      </header>
+      <main class="main">
+        <div class="popup popup_invisible">
+          <div class="edit-form-popup__close-button">+</div>
+          <div class="edit-form-popup">
+            <form class="form">
+              <h2 class="form__title">Editar perfil</h2>
+              <input type="text" class="form__name" />
+              <input type="text" class="form__description" />
+              <input type="submit" value="Salvar" class="form__submit" />
+            </form>
+          </div>
+        </div>
+        <section class="profile">
+          <img
+            src="./images/perfil_alt.jpg"
+            alt="Foto de Miquéias Oliveira em um trilho de metrô em Portugal"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <h2 class="profile__name">Miquéias Oliveira</h2>
+            <div class="profile__edit-button"></div>
+            <p class="profile__description">Web Developer</p>
+          </div>
+          <div class="profile__add-button"></div>
+        </section>
+        <section class="gallery">
+          <div class="gallery__card">
+            <img
+              src="./images/yosemite.jpg"
+              alt="Vale de Yosemite, um vale com um rio e florestas em volta"
+              class="card__image"
+            />
+            <div>
+              <h2 class="card__title">Vale de Yosemite</h2>
+              <div class="card__button"></div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img
+              src="./images/louise.jpg"
+              alt="Imagem do Lago Louise"
+              class="card__image"
+            />
+            <div>
+              <h2 class="card__title">Lago Louise</h2>
+              <div class="card__button"></div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img
+              src="./images/seoul.jpg"
+              alt="Imagem de uma rua em Seoul, Coreia do Sul"
+              class="card__image"
+            />
+            <div>
+              <h2 class="card__title">Ruas de Seoul</h2>
+              <div class="card__button"></div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img
+              src="./images/latemar.jpg"
+              alt="Imagem das motanhas de Latemar"
+              class="card__image"
+            />
+            <div>
+              <h2 class="card__title">Latemar</h2>
+              <div class="card__button"></div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img
+              src="./images/vanoise.jpg"
+              alt="Imagem de um lago com uma montanha ao fundo em Vanoise"
+              class="card__image"
+            />
+            <div>
+              <h2 class="card__title">Vanoise National</h2>
+              <div class="card__button"></div>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img
+              src="./images/braies.jpg"
+              alt="Imagem do Lago di Braies"
+              class="card__image"
+            />
+            <div>
+              <h2 class="card__title">Lago di Braies</h2>
+              <div class="card__button"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">
+          © 2024 Around The U.S. - Miquéias Oliveira
+        </p>
+      </footer>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

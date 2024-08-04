@@ -1,0 +1,40 @@
+.form {
+  border: none;
+  display: grid;
+  width: 100%;
+}
+
+.form__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.form__name, .form__description {
+  font-size: 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  width: 100%;
+  height: 30px;
+}
+
+.form__name:focus, .form__description:focus {
+  outline: none;
+}
+
+.form__submit {
+  width: 358px;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  background-color: #000;
+  color: white;
+  align-self: end;
+  justify-self: center;
+}
+
+.form__submit:hover {
+  opacity: .8;
+  cursor: pointer;
+}
