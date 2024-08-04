@@ -8,22 +8,6 @@
   width: fit-content;
 }
 
-.gallery__card {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  background-color: #FFF;
-}
-
-.gallery__card > div {
-  display: flex;
-  flex-direction: row;
-  justify-self: flex-end;
-  justify-content: space-between;
-  padding: 15px 15px 20px 0;
-}
-
-
 @media screen and (max-width: 720px) {
   .gallery {
     grid-template-columns: 250px;
