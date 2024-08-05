@@ -5,7 +5,7 @@ const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const formName = document.querySelector(".form__name");
 const formDescription = document.querySelector(".form__description");
-const formSubmit = document.querySelector(".form__submit");
+const form = document.querySelector(".form");
 const cardButton = document.querySelectorAll(".card__button");
 const overlay = document.querySelector(".overlay");
 
@@ -22,8 +22,7 @@ closePopup.addEventListener("click", function () {
   overlay.classList.remove("overlay_active");
 });
 
-//Tentei substituir o "click" por "submit", mas não consegui fazer funcionar, ele sempre recarrega a página e a edição dos campos não roda :(
-formSubmit.addEventListener("click", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   profileName.textContent = formName.value;
   profileDescription.textContent = formDescription.value;
