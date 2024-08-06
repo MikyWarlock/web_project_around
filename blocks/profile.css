@@ -1,8 +1,8 @@
 .profile {
-  margin: 40px 0 50px;
+  margin: 40px auto 50px;
   display: grid;
   grid-template-columns: 120px 1fr 150px;
-  width: 100%;
+  max-width: 860px;
   box-sizing: border-box;
 }
 

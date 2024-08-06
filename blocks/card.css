@@ -1,8 +1,10 @@
 .card {
-  width: 282px;
+  max-width: 282px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   background-color: #FFF;
+  justify-self: center;
 }
 
 .card > div {
@@ -52,7 +54,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1105px) {
+@media screen and (max-width: 1200px) {
   .card__title {
     font-size: 18px;
     padding-left: 15px;
