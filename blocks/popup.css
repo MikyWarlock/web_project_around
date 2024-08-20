@@ -48,6 +48,7 @@
 @media screen and (max-width: 720px) {
   .popup {
     top: 15%;
+    left: 45%;
     max-width: 282px;
     width: 100%;
   }
@@ -62,5 +63,15 @@
     max-width: 240px;
     max-height: 300px;
     min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .popup {
+    left: 43%;
+  }
+
+  .popup__edit-form, .popup__add-form {
+    max-width: 250px;
   }
 }
