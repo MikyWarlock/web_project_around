@@ -53,6 +53,10 @@
     width: 100%;
   }
 
+  .popup_image-focus {
+    left: 50%;
+  }
+
   .popup__edit-form, .popup__add-form {
     max-width: 282px;
     height: 322px;
@@ -68,7 +72,12 @@
 
 @media screen and (max-width: 470px) {
   .popup {
-    left: 43%;
+    left: 40%;
+    transform: translate(-40%, -10%);
+  }
+
+  .popup_image-focus {
+    left: 47%;
   }
 
   .popup__edit-form, .popup__add-form {
