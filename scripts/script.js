@@ -128,8 +128,12 @@ function addCard (cardTitle, cardLink) {
   const cardElement = cardsTemplate.querySelector(".card").cloneNode(true);
   const cardButton = cardElement.querySelector(".card__button");
   const cardRemoveButton = cardElement.querySelector(".card__remove-button");
+  const cardImage = cardElement.querySelector(".card__image");
 
-  cardElement.querySelector(".card__image").src = cardLink;
+  cardImage.src = cardLink;
+  cardImage.addEventListener("click", function () {
+    openPopup(imagePopup, cardLink);
+  });
   cardElement.querySelector(".card__title").textContent = cardTitle;
   cardButton.addEventListener("click", function (e) {
     e.target.classList.toggle("card__button_active");
