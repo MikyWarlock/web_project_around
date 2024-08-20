@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Ao Redor dos EUA</title>
   </head>
   <body>
@@ -16,17 +17,38 @@
         <div class="header__line"></div>
       </header>
       <main class="main">
-        <div class="popup popup_invisible">
-          <div class="popup__close-button">+</div>
-          <div class="popup__edit-form">
-            <form class="form">
-              <h2 class="form__title">Editar perfil</h2>
-              <input type="text" class="form__name" required/>
-              <input type="text" class="form__description" required/>
-              <button type="submit" class="form__submit">Salvar</button>
-            </form>
+        <div class="popups">
+
+          <div class="popup popup_invisible" id="edit-popup">
+            <div class="popup__close-button" id="edit-popup__close-button">+</div>
+            <div class="popup__edit-form">
+              <form class="form" id="edit-popup__form">
+                <h2 class="form__title">Editar perfil</h2>
+                <input type="text" class="form__name" id="edit-popup__form-name" required/>
+                <input type="text" class="form__description" id="edit-popup__form-description" required/>
+                <button type="submit" class="form__submit">Salvar</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="popup popup_invisible" id="add-popup">
+            <div class="popup__close-button" id="add-popup__close-button">+</div>
+            <div class="popup__add-form">
+              <form class="form" id="add-popup__form">
+                <h2 class="form__title">Novo local</h2>
+                <input type="text" class="form__name" id="add-popup__form-name" placeholder="Título" required/>
+                <input type="text" class="form__description" id="add-popup__form-link" placeholder="Link da Imagem" required/>
+                <button type="submit" class="form__submit">Criar</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="popup popup_image-focus popup_invisible" id="image-popup">
+            <div class="popup__close-button" id="image-popup__close-button">+</div>
+            <img src="" alt="" class="popup__image">
           </div>
         </div>
+
         <section class="profile">
           <img
             src="./images/perfil_alt.jpg"
@@ -41,72 +63,16 @@
           <div class="profile__add-button"></div>
         </section>
         <section class="gallery">
-          <div class="card">
-            <img
-              src="./images/yosemite.jpg"
-              alt="Vale de Yosemite, um vale com um rio e florestas em volta"
-              class="card__image"
-            />
-            <div>
-              <h2 class="card__title">Vale de Yosemite</h2>
-              <div class="card__button"></div>
+          <template id="card__template">
+            <div class="card">
+              <img src="" alt="" class="card__image">
+              <div class="card__remove-button"></div>
+              <div class="card__description">
+                <h2 class="card__title"></h2>
+                <div class="card__button"></div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/louise.jpg"
-              alt="Imagem do Lago Louise"
-              class="card__image"
-            />
-            <div>
-              <h2 class="card__title">Lago Louise</h2>
-              <div class="card__button"></div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/seoul.jpg"
-              alt="Imagem de uma rua em Seoul, Coreia do Sul"
-              class="card__image"
-            />
-            <div>
-              <h2 class="card__title">Ruas de Seoul</h2>
-              <div class="card__button"></div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/latemar.jpg"
-              alt="Imagem das motanhas de Latemar"
-              class="card__image"
-            />
-            <div>
-              <h2 class="card__title">Latemar</h2>
-              <div class="card__button"></div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/vanoise.jpg"
-              alt="Imagem de um lago com uma montanha ao fundo em Vanoise"
-              class="card__image"
-            />
-            <div>
-              <h2 class="card__title">Vanoise National</h2>
-              <div class="card__button"></div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/braies.jpg"
-              alt="Imagem do Lago di Braies"
-              class="card__image"
-            />
-            <div>
-              <h2 class="card__title">Lago di Braies</h2>
-              <div class="card__button"></div>
-            </div>
-          </div>
+          </template>
         </section>
       </main>
       <footer class="footer">

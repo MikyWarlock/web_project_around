@@ -1,14 +1,18 @@
 .popup {
   display: grid;
-  position: absolute;
-  top: 40%;
+  position: fixed;
+  bottom: 20%;
   left: 50%;
-  transform: translate(-45%, -50%);
+  transform: translate(-45%, -10%);
   z-index: 1;
 }
 
 .popup_invisible {
   display: none;
+}
+
+.popup_image-focus {
+  top: 15%;
 }
 
 .popup__close-button {
@@ -25,7 +29,7 @@
   cursor: pointer;
 }
 
-.popup__edit-form {
+.popup__edit-form, .popup__add-form {
   display: flex;
   width: 430px;
   height: 330px;
@@ -34,13 +38,29 @@
   padding: 34px 36px 36px;
 }
 
+.popup__image {
+  min-height: 400px;
+  max-height: 540px;
+  max-width: 820px;
+  width: 100%;
+}
+
 @media screen and (max-width: 720px) {
   .popup {
     top: 15%;
+    max-width: 282px;
+    width: 100%;
   }
-  .popup__edit-form {
+
+  .popup__edit-form, .popup__add-form {
     max-width: 282px;
     height: 322px;
     padding: 25px 22px;
+  }
+
+  .popup__image {
+    max-width: 240px;
+    max-height: 300px;
+    min-height: 300px;
   }
 }
