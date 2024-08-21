@@ -45,8 +45,8 @@ const initialCards = [
   },
 ];
 
-for(let i = 0; i < initialCards.length; i++) {
-  displayCards(i);
+for(const cards of initialCards) {
+  displayCards(cards);
 }
 
 editPopupFormName.value = profileName.textContent;
@@ -101,18 +101,18 @@ function closePopup(popup) {
   overlay.classList.remove("overlay_active");
 }
 
-function displayCards (index) {
+function displayCards (card) {
   const cardsTemplate = document.querySelector("#card__template").content;
   const cardElement = cardsTemplate.querySelector(".card").cloneNode(true);
   const cardButton = cardElement.querySelector(".card__button");
   const cardRemoveButton = cardElement.querySelector(".card__remove-button");
   const cardImage = cardElement.querySelector(".card__image");
 
-  cardImage.src = initialCards[index].link;
+  cardImage.src = card.link;
   cardImage.addEventListener("click", function () {
-    openPopup(imagePopup, initialCards[index].link);
+    openPopup(imagePopup, card.link);
   });
-  cardElement.querySelector(".card__title").textContent = initialCards[index].name;
+  cardElement.querySelector(".card__title").textContent = card.name;
   cardButton.addEventListener("click", function (e) {
       e.target.classList.toggle("card__button_active");
     });
