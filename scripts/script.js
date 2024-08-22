@@ -21,11 +21,11 @@ const gallery = document.querySelector(".gallery");
 const initialCards = [
   {
     name: "Vale de Yosemite",
-    link: "./images/yosemite.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
   },
   {
     name: "Lago Louise",
-    link: "./images/louise.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
   },
   {
     name: "Ruas de Seoul",
@@ -33,15 +33,15 @@ const initialCards = [
   },
   {
     name: "Latemar",
-    link: "./images/latemar.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
   },
   {
     name: "Parque Nacional de Vanoise",
-    link: "./images/vanoise.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg"
   },
   {
     name: "Lago di Braies",
-    link: "./images/braies.jpg"
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
   },
 ];
 
