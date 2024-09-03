@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.popup__edit-form, .popup__add-form {
+.popup__form {
   display: flex;
   width: 430px;
   height: 330px;
@@ -57,7 +57,7 @@
     left: 50%;
   }
 
-  .popup__edit-form, .popup__add-form {
+  .popup__form {
     max-width: 282px;
     height: 322px;
     padding: 25px 22px;

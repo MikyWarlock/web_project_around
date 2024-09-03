@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.form__name, .form__description {
+.form__input {
   font-size: 14px;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -19,8 +19,24 @@
   height: 30px;
 }
 
-.form__name:focus, .form__description:focus {
+.form__input:focus {
   outline: none;
+}
+
+.form__name-error, .form__description-error, .form__post-title-error, .form__link-error {
+  display: hidden;
+  color: #FF0000;
+  font-size: 12px;
+  height: fit-content;
+  margin-top: -25px;
+}
+
+.form__input_type_error {
+  border-bottom: 1px solid red;
+}
+
+.form__input_error_active {
+  display: block;
 }
 
 .form__submit {
@@ -34,6 +50,12 @@
   justify-self: center;
 }
 
+.form__submit_inactive {
+  color: rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .2);
+}
+
 .form__submit:hover {
   opacity: .8;
   cursor: pointer;
@@ -43,8 +65,8 @@
   .form__title {
     font-size: 18px;
   }
-  
-  .form__name, .form__description {
+
+  .form__input {
     width: 100%;
   }
 

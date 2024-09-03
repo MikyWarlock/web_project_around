@@ -7,10 +7,10 @@ const editPopupCloseButton = document.querySelector("#edit-popup__close-button")
 const addPopupCloseButton = document.querySelector("#add-popup__close-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
-const editPopupFormName = document.querySelector("#edit-popup__form-name");
-const editPopupFormDescription = document.querySelector("#edit-popup__form-description");
-const addPopupFormName = document.querySelector("#add-popup__form-name");
-const addPopupFormLink = document.querySelector("#add-popup__form-link");
+const editPopupFormName = document.querySelector("#form__name");
+const editPopupFormDescription = document.querySelector("#form__description");
+const addPopupFormName = document.querySelector("#form__post-title");
+const addPopupFormLink = document.querySelector("#form__link");
 const editPopupForm = document.querySelector("#edit-popup__form");
 const addPopupForm = document.querySelector("#add-popup__form");
 const imagePopup = document.querySelector("#image-popup");
@@ -54,6 +54,14 @@ editPopupFormDescription.value = profileDescription.textContent;
 
 profileEditButton.addEventListener("click", function () {
   openPopup(editPopup);
+  overlay.addEventListener("click", function() {
+    closePopup(editPopup);
+  });
+  document.addEventListener("keydown", function(e) {
+    if(e.key === "Escape") {
+      closePopup(editPopup);
+    }
+  });
 });
 
 editPopupCloseButton.addEventListener("click", function () {
@@ -69,6 +77,14 @@ editPopupForm.addEventListener("submit", function (e) {
 
 profileAddButton.addEventListener("click", function () {
   openPopup(addPopup);
+  overlay.addEventListener("click", function() {
+    closePopup(addPopup);
+  });
+  document.addEventListener("keydown", function(e) {
+    if(e.key === "Escape") {
+      closePopup(addPopup);
+    }
+  });
 });
 
 addPopupCloseButton.addEventListener("click", function () {
@@ -111,6 +127,14 @@ function displayCards (card) {
   cardImage.src = card.link;
   cardImage.addEventListener("click", function () {
     openPopup(imagePopup, card.link);
+    overlay.addEventListener("click", function() {
+      closePopup(imagePopup);
+    });
+    document.addEventListener("keydown", function(e) {
+      if(e.key === "Escape") {
+        closePopup(imagePopup);
+      }
+    });
   });
   cardElement.querySelector(".card__title").textContent = card.name;
   cardButton.addEventListener("click", function (e) {

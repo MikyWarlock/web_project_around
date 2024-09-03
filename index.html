@@ -21,11 +21,13 @@
 
           <div class="popup popup_invisible" id="edit-popup">
             <div class="popup__close-button" id="edit-popup__close-button">+</div>
-            <div class="popup__edit-form">
+            <div class="popup__form">
               <form class="form" id="edit-popup__form">
                 <h2 class="form__title">Editar perfil</h2>
-                <input type="text" class="form__name" id="edit-popup__form-name" required/>
-                <input type="text" class="form__description" id="edit-popup__form-description" required/>
+                <input type="text" class="form__input" id="form__name" minlength="2" maxlength="40" required/>
+                <span class="form__name-error"></span>
+                <input type="text" class="form__input" id="form__description" minlength="2" maxlength="200" required/>
+                <span class="form__description-error"></span>
                 <button type="submit" class="form__submit">Salvar</button>
               </form>
             </div>
@@ -33,11 +35,13 @@
 
           <div class="popup popup_invisible" id="add-popup">
             <div class="popup__close-button" id="add-popup__close-button">+</div>
-            <div class="popup__add-form">
+            <div class="popup__form">
               <form class="form" id="add-popup__form">
                 <h2 class="form__title">Novo local</h2>
-                <input type="text" class="form__name" id="add-popup__form-name" placeholder="Título" required/>
-                <input type="url" class="form__description" id="add-popup__form-link" placeholder="Link da Imagem" required/>
+                <input type="text" class="form__input" id="form__post-title" placeholder="Título" minlength="2" maxlength="30" required/>
+                <span class="form__post-title-error"></span>
+                <input type="url" class="form__input" id="form__link" placeholder="Link da Imagem" required/>
+                <span class="form__link-error"></span>
                 <button type="submit" class="form__submit">Criar</button>
               </form>
             </div>
@@ -82,5 +86,6 @@
       </footer>
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
