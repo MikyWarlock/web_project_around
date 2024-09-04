@@ -93,8 +93,8 @@ addPopupCloseButton.addEventListener("click", function () {
 
 addPopupForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  let cardTitle = addPopupFormName.value;
-  let cardLink = addPopupFormLink.value;
+  const cardTitle = addPopupFormName.value;
+  const cardLink = addPopupFormLink.value;
   addCard(cardTitle, cardLink);
   closePopup(addPopup);
 });
