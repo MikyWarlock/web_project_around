@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Ao Redor dos EUA</title>
   </head>
   <body>
@@ -18,15 +18,30 @@
       </header>
       <main class="main">
         <div class="popups">
-
           <div class="popup popup_invisible" id="edit-popup">
-            <div class="popup__close-button" id="edit-popup__close-button">+</div>
+            <div class="popup__close-button" id="edit-popup__close-button">
+              +
+            </div>
             <div class="popup__form">
               <form class="form" id="edit-popup__form">
                 <h2 class="form__title">Editar perfil</h2>
-                <input type="text" class="form__input" id="form__name" minlength="2" maxlength="40" required/>
+                <input
+                  type="text"
+                  class="form__input"
+                  id="form__name"
+                  minlength="2"
+                  maxlength="40"
+                  required
+                />
                 <span class="form__name-error"></span>
-                <input type="text" class="form__input" id="form__description" minlength="2" maxlength="200" required/>
+                <input
+                  type="text"
+                  class="form__input"
+                  id="form__description"
+                  minlength="2"
+                  maxlength="200"
+                  required
+                />
                 <span class="form__description-error"></span>
                 <button type="submit" class="form__submit">Salvar</button>
               </form>
@@ -34,13 +49,29 @@
           </div>
 
           <div class="popup popup_invisible" id="add-popup">
-            <div class="popup__close-button" id="add-popup__close-button">+</div>
+            <div class="popup__close-button" id="add-popup__close-button">
+              +
+            </div>
             <div class="popup__form">
               <form class="form" id="add-popup__form">
                 <h2 class="form__title">Novo local</h2>
-                <input type="text" class="form__input" id="form__post-title" placeholder="Título" minlength="2" maxlength="30" required/>
+                <input
+                  type="text"
+                  class="form__input"
+                  id="form__post-title"
+                  placeholder="Título"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                />
                 <span class="form__post-title-error"></span>
-                <input type="url" class="form__input" id="form__link" placeholder="Link da Imagem" required/>
+                <input
+                  type="url"
+                  class="form__input"
+                  id="form__link"
+                  placeholder="Link da Imagem"
+                  required
+                />
                 <span class="form__link-error"></span>
                 <button type="submit" class="form__submit">Criar</button>
               </form>
@@ -48,8 +79,10 @@
           </div>
 
           <div class="popup popup_image-focus popup_invisible" id="image-popup">
-            <div class="popup__close-button" id="image-popup__close-button">+</div>
-            <img src="#" alt="" class="popup__image">
+            <div class="popup__close-button" id="image-popup__close-button">
+              +
+            </div>
+            <img src="#" alt="" class="popup__image" />
           </div>
         </div>
 
@@ -69,7 +102,7 @@
         <section class="gallery">
           <template id="card__template">
             <div class="card">
-              <img src="#" alt="" class="card__image">
+              <img src="#" alt="" class="card__image" />
               <div class="card__remove-button"></div>
               <div class="card__description">
                 <h2 class="card__title"></h2>
@@ -85,7 +118,6 @@
         </p>
       </footer>
     </div>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/validation.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
