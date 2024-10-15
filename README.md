@@ -8,4 +8,4 @@ Primeiro projeto a utilizar WebPack.
 
 ## Link para o GitHub Pages:
 
-https://mikywarlock.github.io/web_project_around/
+https://mikywarlock.github.io/web_project_around/dist/
