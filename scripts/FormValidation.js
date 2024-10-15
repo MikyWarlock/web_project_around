@@ -1,7 +1,7 @@
 export default class FormValidation {
   constructor(data, formElement) {
     this._data = data;
-    this._formElement = formElement;
+    this._formElement = document.querySelector(formElement);
   }
 
   _showInputError(formElement, inputElement, errorMessage) {

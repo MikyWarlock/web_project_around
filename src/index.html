@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Ao Redor dos EUA</title>
   </head>
@@ -27,6 +26,7 @@
                 <h2 class="form__title">Editar perfil</h2>
                 <input
                   type="text"
+                  name="name"
                   class="form__input"
                   id="form__name"
                   minlength="2"
@@ -36,6 +36,7 @@
                 <span class="form__name-error"></span>
                 <input
                   type="text"
+                  name="job"
                   class="form__input"
                   id="form__description"
                   minlength="2"
@@ -57,6 +58,7 @@
                 <h2 class="form__title">Novo local</h2>
                 <input
                   type="text"
+                  name="post-title"
                   class="form__input"
                   id="form__post-title"
                   placeholder="Título"
@@ -67,6 +69,7 @@
                 <span class="form__post-title-error"></span>
                 <input
                   type="url"
+                  name="post-link"
                   class="form__input"
                   id="form__link"
                   placeholder="Link da Imagem"
@@ -82,13 +85,16 @@
             <div class="popup__close-button" id="image-popup__close-button">
               +
             </div>
-            <img src="#" alt="" class="popup__image" />
+            <div>
+              <img src="#" alt="" class="popup__image" />
+              <p class="popup__image-subtitile"></p>
+            </div>
           </div>
         </div>
 
         <section class="profile">
           <img
-            src="./images/perfil_alt.jpg"
+            src="<%=require('../images/perfil_alt.jpg')%>"
             alt="Foto de Miquéias Oliveira em um trilho de metrô em Portugal"
             class="profile__image"
           />
@@ -118,6 +124,5 @@
         </p>
       </footer>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

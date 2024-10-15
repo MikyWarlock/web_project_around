@@ -1,9 +1,8 @@
-import { openPopup, closePopup, overlay } from "./utils.js";
-
 export default class Card {
-  constructor(data, template) {
+  constructor(data, template, { handleCardClick }) {
     this._data = data;
     this._template = template;
+    this._handleCardClick = handleCardClick;
   }
 
   _getCardElement() {
@@ -15,20 +14,10 @@ export default class Card {
 
   _setImageEvents(cardElement) {
     const link = this._data.link;
-    const imagePopup = document.querySelector("#image-popup");
-    cardElement
-      .querySelector(".card__image")
-      .addEventListener("click", function () {
-        openPopup(imagePopup, link);
-        overlay.addEventListener("click", function () {
-          closePopup(imagePopup);
-        });
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") {
-            closePopup(imagePopup);
-          }
-        });
-      });
+    const title = this._data.name;
+    cardElement.querySelector(".card__image").addEventListener("click", () => {
+      this._handleCardClick(link, title);
+    });
   }
 
   _setLikeButtonEvents(cardElement) {
@@ -53,13 +42,13 @@ export default class Card {
     this._setRemoveButtonEvents(cardElement);
   }
 
-  generateCard(gallery) {
+  generateCard() {
     this._element = this._getCardElement();
     this._setEventListeners(this._element);
 
     this._element.querySelector(".card__image").src = this._data.link;
     this._element.querySelector(".card__title").textContent = this._data.name;
 
-    gallery.prepend(this._element);
+    return this._element;
   }
 }
