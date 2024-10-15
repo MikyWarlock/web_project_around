@@ -11,7 +11,7 @@ import {
   formConfig,
   profileAddButton,
   profileEditButton,
-} from "../scripts/utils.js";
+} from "./scripts/utils.js";
 
 const addForm = new FormValidation(formConfig, "#add-popup__form");
 addForm.enableValidation();
