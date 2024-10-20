@@ -43,32 +43,33 @@ const initialize = new Section(
 
 initialize.renderItems();
 
-profileAddButton.addEventListener("click", () => {
-  const addPopup = new PopupWithForm(
-    {
-      callbackFunction: (inputs) => {
-        const card = new Card(
-          { name: inputs[2].value, link: inputs[3].value },
-          template,
-          {
-            handleCardClick: (link, title) => {
-              const popupWithImage = new PopupWithImage(
-                "#image-popup",
-                ".popup__image",
-                ".popup__image-subtitile"
-              );
-              popupWithImage.setEventListeners();
-              popupWithImage.open(link, title);
-            },
-          }
-        );
-        const cardElement = card.generateCard();
-        initialize.addItem(cardElement);
-      },
+const addPopup = new PopupWithForm(
+  {
+    callbackFunction: (inputs) => {
+      const card = new Card(
+        { name: inputs[2].value, link: inputs[3].value },
+        template,
+        {
+          handleCardClick: (link, title) => {
+            const popupWithImage = new PopupWithImage(
+              "#image-popup",
+              ".popup__image",
+              ".popup__image-subtitile"
+            );
+            popupWithImage.setEventListeners();
+            popupWithImage.open(link, title);
+          },
+        }
+      );
+      const cardElement = card.generateCard();
+      initialize.addItem(cardElement);
     },
-    "#add-popup"
-  );
-  addPopup.setEventListeners();
+  },
+  "#add-popup"
+);
+addPopup.setEventListeners();
+
+profileAddButton.addEventListener("click", () => {
   addPopup.open();
 });
 
@@ -86,5 +87,7 @@ profileEditButton.addEventListener("click", () => {
     "#edit-popup"
   );
   editPopup.setEventListeners();
+  document.querySelector("#form__name").value = document.querySelector(".profile__name").textContent;
+  document.querySelector("#form__description").value = document.querySelector(".profile__description").textContent;
   editPopup.open();
 });

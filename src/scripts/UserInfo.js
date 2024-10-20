@@ -7,13 +7,12 @@ export default class UserInfo {
   getUserInfo() {
     const name = document.querySelector(".profile__name");
     const job = document.querySelector(".profile__description");
-    return { name: name.textContent, description: job.textContent };
+    return { name: name, description: job };
   }
 
   setUserInfo() {
-    const name = document.querySelector(".profile__name");
-    const job = document.querySelector(".profile__description");
-    name.textContent = this._name;
-    job.textContent = this._job;
+    const user = this.getUserInfo();
+    user.name.textContent = this._name;
+    user.description.textContent = this._job;
   }
 }
