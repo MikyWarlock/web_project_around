@@ -73,20 +73,21 @@ profileAddButton.addEventListener("click", () => {
   addPopup.open();
 });
 
-profileEditButton.addEventListener("click", () => {
-  const editPopup = new PopupWithForm(
-    {
-      callbackFunction: (inputs) => {
-        const user = new UserInfo({
-          name: inputs[0].value,
-          job: inputs[1].value,
-        });
-        user.setUserInfo();
-      },
+const editPopup = new PopupWithForm(
+  {
+    callbackFunction: (inputs) => {
+      const user = new UserInfo({
+        name: inputs[0].value,
+        job: inputs[1].value,
+      });
+      user.setUserInfo();
     },
-    "#edit-popup"
-  );
-  editPopup.setEventListeners();
+  },
+  "#edit-popup"
+);
+editPopup.setEventListeners();
+
+profileEditButton.addEventListener("click", () => {
   document.querySelector("#form__name").value = document.querySelector(".profile__name").textContent;
   document.querySelector("#form__description").value = document.querySelector(".profile__description").textContent;
   editPopup.open();
